@@ -1,14 +1,20 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Stock Market Platform Backend API",
   "license": "ISC",
   "author": "Dharmendra",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js "
-  },
+  "start": "node index.js",           
+  "dev": "nodemon index.js",    
+  "build": "echo 'No build step needed for Node.js backend'",
+  "vercel-build": "echo 'No build step for Vercel'"
+},
+"engines": {
+  "node": ">=18.x"
+},
   "devDependencies": {
     "nodemon": "^3.1.11"
   },
