@@ -20,7 +20,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: ["http://localhost:3000", "https://stockmarketdashboard.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
@@ -218,6 +218,7 @@ mongoose
 // })
 
 app.get("/allHoldings", async (req, res) => {
+  console.log("Fetching all holdings...");
   let allHoldings = await HoldingsModel.find({});
   res.json(allHoldings);
 });
